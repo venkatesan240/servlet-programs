@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 80vh;
+    background-size: cover;
+  }
+  
+  .container {
+    width: 350px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgb(40, 33, 33) 0px 3px 8px 6px;
+  }
+  
+  h2 {
+    text-align:center;
+    color:  darkblue;
+    padding-bottom: 1px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display:ruby-base;
+    color: rgb(61, 8, 8);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  input[type="submit"]{
+    padding: 10px;
+    width: 99%;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color:green;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+  input[type="submit"]:hover{
+    background-color: #0056b3;
+    transform: scale(1.1);
+    transition: all ease 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+	p{
+ 	 text-align: center;
+	}
+	a:hover{
+ 	 color: red;
+	}
+ 		
+</style>
+<body>
+		 <h2>Registration</h2>
+      <form action="Example1">
+        <div class="form-group">
+          <label for="username">User Name:</label>
+          <input type="text" placeholder="Username" name="username" required>
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Email" name="email" required>
+          <label for="mobile">Mobile:</label>
+          <input type="number" placeholder="Mobile" name="mobile" required>
+          <label for="password">Password:</label>
+          <input type="password" placeholder="Password" name="password" required>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" placeholder="Confirm-password" name="confirm-password" required>
+          <input  type="submit" value="Register">
+        </div>
+      </form>
+      <a>-------------------------------or------------------------------</a>
+     <p>Already a user?<a href="login1.html">LOGIN</a></p>
+</body>
+</html>
