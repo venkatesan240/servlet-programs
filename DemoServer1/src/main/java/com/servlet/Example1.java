@@ -2,6 +2,7 @@ package com.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,12 +32,28 @@ public class Example1 extends HttpServlet {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("").append(request.getContextPath());
 		String name=request.getParameter("username");
+		String email = request.getParameter("email");
+		int mobile = Integer.parseInt(request.getParameter("mobile"));
 		String password=request.getParameter("password");
+		String confirmpassword = request.getParameter("confirm-password");
 		PrintWriter writer=response.getWriter();
-		writer.println(name);
-		writer.println(password);
-		System.out.println(name);
-		System.out.println(password);
+		writer.println("name:"+name);
+		writer.println("email:"+email);
+		writer.println("mobile:"+mobile);
+		writer.println("password:"+password);
+		writer.println("confirm password:"+confirmpassword);
+		System.out.println("name:"+name);
+		System.out.println("email:"+email);
+		System.out.println("mobile:"+mobile);
+		System.out.println("password:"+password);
+		System.out.println("confirm password:"+confirmpassword);
+		ArrayList list=new ArrayList();
+		list.add(name);
+		list.add(email);
+		list.add(mobile);
+		list.add(password);
+		list.add(confirmpassword);
+		System.out.println("arraylist:"+list);
 	}
 
 	/**
