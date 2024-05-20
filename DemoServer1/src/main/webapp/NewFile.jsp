@@ -59,7 +59,8 @@
             <td>
                    <form action="Example1" method="post">
                        <input type="hidden" name="email" value="<%= item.getEmail() %>">
-                       <input type="submit" value="delete" name="action">
+                       <input type="hidden" value="delete" name="action">
+                       <input type="submit" value="delete">
                    </form>
                </td>
          </tr>  

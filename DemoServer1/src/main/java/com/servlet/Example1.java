@@ -3,6 +3,7 @@ package com.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -58,11 +59,17 @@ public class Example1 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doDelete(String email ,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        for(int i=0;i<list.size();i++) {
-            if((list.get(i).getEmail())==email) {
-                list.remove(i);
-            }
-        }
+		    ArrayList<Register> list = (ArrayList<Register>) request.getAttribute("list");
+		    if (list != null) {
+		        Iterator<Register> iterator = list.iterator();
+		        while (iterator.hasNext()) {
+		            Register item = iterator.next();
+		            if (item.getEmail().equals(email)) {
+		                iterator.remove();
+		                // Don't break here, continue iterating
+		            }
+		        }
+		    }
         request.setAttribute("list", list);
         request.getRequestDispatcher("NewFile.jsp").forward(request, response);
     }
